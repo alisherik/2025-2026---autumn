@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+find_package (Threads)
+project(sum_func)
+enable_language(CXX)
+add_library(sum_func STATIC sum_func.cpp)
+message(STATUS "pthread ${CMAKE_THREAD_LIBS_INIT}")
+target_link_libraries(sum_func PUBLIC ${CMAKE_THREAD_LIBS_INIT})
